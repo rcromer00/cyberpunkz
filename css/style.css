@@ -216,8 +216,9 @@ p {
  ============ */
 .scrolling-wrapper{
 display: grid;
-/* background: blue */
-/* -webkit-overflow-scrolling: touch; */
+grid-template-columns: repeat(3, 1fr);
+-webkit-overflow-scrolling: touch;
+overflow-x: scroll;
 }
 
 .card{
