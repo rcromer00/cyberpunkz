@@ -152,15 +152,17 @@ p {
   position: fixed;
   top: 5%;
   left: 5%;
-  font-size: 2.5rem;
+  font-size: 2rem;
   z-index: 1;
   cursor: pointer;
   transition: var(--transition);
+  color: var(--clr-yellowLight);
 }
 
 .nav-btn:hover {
   transform: scale(1.2);
 }
+
 .navbar {
   background: var(--clr-grey10);
   position: fixed;
@@ -214,9 +216,20 @@ p {
   border-left: 0.25rem solid var(--clr-pink);
 }
 @media screen and (min-width: 768px) {
-  .navbar {
-    width: 30%;
-    max-width: 20rem;
+	.navbar-container{
+		position: relative;
+	}
+	.navbar {
+	background: red;
+	display: flex;
+	flex-wrap: nowrap;
+    width: 100vw;
+	max-height: fit-content;
+	transform: none;
+  }
+  .nav-items li{
+	display: block;
+	position: absolute;
   }
 }
 /*==========
