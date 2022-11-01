@@ -3,7 +3,6 @@ const navBtn = document.getElementById("nav-btn");
 const navBar = document.getElementById("navbar");
 const navClose = document.getElementById("nav-close");
 
-
 // show nav
 navBtn.addEventListener("click", () => {
 	navBar.classList.add("showNav");
@@ -17,12 +16,12 @@ navClose.addEventListener("click", () => {
 
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-   navBar.style.top = "0";
-  } else {
-    navBar.style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-}
+window.onscroll = function () {
+	var currentScrollPos = window.pageYOffset;
+	if (prevScrollpos > currentScrollPos) {
+		navBar.style.top = "0";
+	} else {
+		navBar.style.top = "-50px";
+	}
+	prevScrollpos = currentScrollPos;
+};

@@ -277,6 +277,7 @@ p {
   height: 200px;
   width: 300px;
   margin: 2rem;
+  margin-bottom: 4rem;
 }
 
 .card img {
@@ -314,6 +315,25 @@ p {
   visibility: hidden;
   opacity: 0;
   transition: var(--transition);
+}
+
+.character-img{
+  visibility:hidden;
+  font-size: 0
+}
+@media screen and (min-width: 768px) {
+  .scrolling-wrapper{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* grid-template-areas: ; */
+  }
+
+  .character-img{
+    width: 200px;
+    height: 300px;
+    float: right;
+    visibility: visible;
+  }
 }
 
 /*===============
