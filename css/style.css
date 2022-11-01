@@ -1,5 +1,5 @@
 /*==========
-    FONTS
+FONTS
  ===========*/
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Quicksand&family=Yanone+Kaffeesatz:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
@@ -166,9 +166,7 @@ p {
 .navbar {
   background: var(--clr-grey10);
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  left: -2px;
   bottom: 0;
   z-index: 2;
   box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
@@ -216,21 +214,23 @@ p {
   border-left: 0.25rem solid var(--clr-pink);
 }
 @media screen and (min-width: 768px) {
-	.navbar-container{
-		position: relative;
-	}
 	.navbar {
-	background: red;
-	display: flex;
-	flex-wrap: nowrap;
-    width: 100vw;
+  display: flex;
+  flex-wrap: nowrap;
+	background: transparent;
 	max-height: fit-content;
 	transform: none;
-  }
-  .nav-items li{
-	display: block;
-	position: absolute;
-  }
+  box-shadow: none;
+}
+.nav-link{
+  font-size: 1.2rem;
+  display: inline-block;  
+  padding: 1rem;
+}
+.nav-close, .nav-btn {
+  visibility: hidden;
+  opacity: 0;
+}
 }
 /*==========
     HEADER
@@ -279,6 +279,11 @@ p {
   margin: 2rem;
 }
 
+.card img {
+  max-width: 300px;
+  height: 200px;
+}
+
 .article-content h2{
 	font-size: 1.7rem;
 }
@@ -291,7 +296,6 @@ p {
   right: 0;
   background: rgba(245, 253, 0, 0.6);
   visibility: hidden;
-  opacity: 0;
   transition: opacity 0.2s, visibility 0.2s;
   padding: 0.25rem;
   color: var(--clr-yellowDark);
