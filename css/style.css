@@ -258,17 +258,20 @@ p {
  ============ */
 
 .scrolling-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-/* hides scrollbar */
+hides scrollbar
 .scrolling-wrapper::-webkit-scrollbar {
   display: none;
+}
+
+.article-container{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
 }
 
 .card {
@@ -318,22 +321,28 @@ p {
 }
 
 .character-img{
-  visibility:hidden;
-  font-size: 0
+  display: none;
+  transition: var(--transition);
 }
+
 @media screen and (min-width: 768px) {
-  .scrolling-wrapper{
-    grid-template-columns: repeat(2, 1fr);
+  .article-container{
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    /* grid-template-areas: ; */
+  }
+  .scrolling-wrapper{
+  position: relative;
   }
 
   .character-img{
-    width: 200px;
-    height: 300px;
-    float: right;
-    visibility: visible;
+    display: block;
+    position: absolute;
+    max-width: 400px;
+    top: 100px;
+    right: 100px;
+    z-index: -1;
   }
+  
 }
 
 /*===============
