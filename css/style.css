@@ -264,7 +264,7 @@ p {
   scrollbar-width: none;
 }
 
-hides scrollbar
+/* hides scrollbar */
 .scrolling-wrapper::-webkit-scrollbar {
   display: none;
 }
