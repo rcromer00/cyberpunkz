@@ -257,25 +257,31 @@ p {
     ARTICLES
  ============ */
 
+/* scrollbar customization */
 .scrolling-wrapper {
   overflow-x: scroll;
+  scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
-  scrollbar-width: none;
-  margin: 1rem;
+  /* margin: 1rem; */
   padding: 2rem;
-  position: relative;
 }
 
-/* hides scrollbar */
 .scrolling-wrapper::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
+  height: 00.5rem;
 }
 
-.wrapper-text{
-position: absolute;
-margin: 0 auto;
+.scrolling-wrapper::-webkit-scrollbar-thumb{
+  background: linear-gradient(
+    to left,
+		var(--clr-pinkLight),
+		#e9b949,
+		var(--clr-pink)
+    );
+    border-radius: 10px;
 }
+
 .article-container{
 display: grid;
 grid-template-columns: repeat(3, 1fr);
