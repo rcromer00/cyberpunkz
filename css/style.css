@@ -3,6 +3,7 @@ FONTS
  ===========*/
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Quicksand&family=Yanone+Kaffeesatz:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
 /*==============
     VARIABLES
  ===============*/
@@ -38,7 +39,7 @@ FONTS
 }
 
 body {
-  background: black;
+  background: #181818;
   font-family: var(--ff-primary);
   color: var(--clr-yellow);
   font-size: 2rem;
@@ -286,6 +287,7 @@ p {
   background: none;
 }
 
+/* article customization */
 .article-container{
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -306,6 +308,7 @@ grid-template-columns: repeat(3, 1fr);
 
 .article-content h2{
 	font-size: 1.7rem;
+  margin: 0.5rem 0 0.5rem 0;
 }
 
 .article-text {
@@ -316,7 +319,7 @@ grid-template-columns: repeat(3, 1fr);
   right: 0;
   background: rgba(245, 253, 0, 0.6);
   visibility: hidden;
-  transition: opacity 0.2s, visibility 0.2s;
+  /* transition: opacity 0.2s, visibility 0.2s; */
   padding: 0.25rem;
   color: var(--clr-yellowDark);
   height: 100%;
@@ -381,11 +384,23 @@ grid-template-columns: repeat(3, 1fr);
 	padding: 2rem;
 	text-align: center;
 	line-height: 2.7rem;
+  color: var(--clr-yellowLight);
 }
 
-.underline{
-	border: 2px red;
+.section-para {
+  animation: glow 1s ease-in-out infinite alternate;
 }
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--clr-yellow), 0 0 40px var(--clr-yellow), 0 0 50px var(--clr-yellow), 0 0 60px var(--clr-yellow), 0 0 70px var(--clr-yellow);
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px var(--clr-yellowLight), 0 0 40px var(--clr-yellowLight), 0 0 50px var(--clr-yellowLight), 0 0 60px var(--clr-yellowLight), 0 0 70px var(--clr-yellowLight), 0 0 80px var(--clr-yellowLight);
+  }
+}
+
 
 /*==========
     FOOTER
@@ -407,7 +422,7 @@ grid-template-columns: repeat(3, 1fr);
 }
 
 .footer-text {
-  color: var(--clr-yellowDark);
+  color: var(--clr-yellow);
   text-transform: uppercase;
   margin: 1rem;
 }
