@@ -282,6 +282,10 @@ p {
     border-radius: 10px;
 }
 
+.styled-scrollbars::-webkit-scrollbar-track {
+  background: none;
+}
+
 .article-container{
 display: grid;
 grid-template-columns: repeat(3, 1fr);
