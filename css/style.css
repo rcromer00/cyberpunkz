@@ -146,6 +146,20 @@ p {
   max-width: 1170px;
 }
 
+/*============
+  ANIMATIONS
+ ============= */
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--clr-yellow), 0 0 40px var(--clr-yellow), 0 0 50px var(--clr-yellow), 0 0 60px var(--clr-yellow), 0 0 70px var(--clr-yellow);
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px var(--clr-yellowLight), 0 0 40px var(--clr-yellowLight), 0 0 50px var(--clr-yellowLight), 0 0 60px var(--clr-yellowLight), 0 0 70px var(--clr-yellowLight), 0 0 80px var(--clr-yellowLight);
+  }
+}
+
 /*==========
     NAVBAR
  =========== */
@@ -167,9 +181,10 @@ p {
 .navbar {
   background: var(--clr-grey10);
   position: fixed;
+  max-height: 100vh;
   left: -2px;
   bottom: 0;
-  z-index: 2;
+  z-index: 1;
   box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
   transform: translateX(-100%);
   transition: var(--transition);
@@ -197,6 +212,8 @@ p {
 
 .nav-items {
   list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .nav-link {
@@ -245,6 +262,8 @@ p {
 }
 .header h1 {
   text-transform: uppercase;
+  animation: glow 1s ease-in-out infinite alternate;
+  color: var(--clr-yellowLight);
 }
 .banner {
   text-align: center;
@@ -386,21 +405,6 @@ grid-template-columns: repeat(3, 1fr);
 	line-height: 2.7rem;
   color: var(--clr-yellowLight);
 }
-
-.section-para {
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--clr-yellow), 0 0 40px var(--clr-yellow), 0 0 50px var(--clr-yellow), 0 0 60px var(--clr-yellow), 0 0 70px var(--clr-yellow);
-  }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px var(--clr-yellowLight), 0 0 40px var(--clr-yellowLight), 0 0 50px var(--clr-yellowLight), 0 0 60px var(--clr-yellowLight), 0 0 70px var(--clr-yellowLight), 0 0 80px var(--clr-yellowLight);
-  }
-}
-
 
 /*==========
     FOOTER
