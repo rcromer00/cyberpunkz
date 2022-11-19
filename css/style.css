@@ -26,6 +26,8 @@ FONTS
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
+  --shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+
 }
 
 /*=================
@@ -120,6 +122,25 @@ p {
     line-height: 1;
   }
 }
+/* full-width input fields*/
+input[type=text], input[type=password] {
+  width:100%;
+  padding: 0.8rem;
+  margin: 0.2rem 0 1.3rem 0;
+  display: inline-block;
+  border: none;
+  background: var(--clr-grey1);
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color:var(--clr-grey10);
+  outline: none;
+}
+
+hr {
+  border: 1px solid var(--clr-grey10);
+  margin-bottom: 1.5rem;
+}
 
 /* clearfix */
 .clearfix::after,
@@ -145,6 +166,72 @@ p {
   margin: 0 auto;
   max-width: 1170px;
 }
+
+.container {
+  padding: 1rem;
+}
+
+/* header global styles */
+.header{
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  url("../images/cp-city.jpeg") center/cover no-repeat fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.header h1 {
+  text-transform: uppercase;
+  animation: glow 1s ease-in-out infinite alternate;
+  color: var(--clr-yellowLight);
+}
+
+.banner {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* end of header global styles */
+
+/* button global styles */
+.btn {
+  padding: 1rem;
+  margin: 2rem;
+  font-family: var(--ff-primary);
+  border: none;
+  border-radius: 10%;
+  background: var(--clr-yellow);
+  color: var(--clr-yellowDark);
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.btn:hover {
+  background: var(--clr-yellowDark);
+  color: var(--clr-yellowLight);
+  opacity: 1;
+}
+
+.cancelbtn {
+  padding: 0.7rem 1.4rem;
+  background-color: #bb2525;
+}
+
+.cancelbtn, .signupbtn {
+  float:left;
+  width: 50%;
+}
+
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+/* end of button global styles */
 
 /*============
   ANIMATIONS
@@ -179,11 +266,12 @@ p {
 }
 
 .navbar {
-  background: var(--clr-grey10);
+  background: var(--clr-grey5);
   position: fixed;
-  max-height: 100vh;
+  height: 100%;
   left: -2px;
   bottom: 0;
+  top: 0;
   z-index: 1;
   box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
   transform: translateX(-100%);
@@ -235,10 +323,11 @@ p {
 	.navbar {
   display: flex;
   flex-wrap: nowrap;
-	background: transparent;
-	max-height: fit-content;
+	height: fit-content;
+  width: 100vw;
 	transform: none;
   box-shadow: none;
+  background: var(--clr-grey5);
 }
 .nav-link{
   font-size: 1.2rem;
@@ -253,25 +342,14 @@ p {
 /*==========
     HEADER
  =========== */
-.header {
+.header.index-header {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../images/cyberpunk.webp") center/cover no-repeat fixed;
   position: relative;
   overflow-x: hidden;
 }
-.header h1 {
-  text-transform: uppercase;
-  animation: glow 1s ease-in-out infinite alternate;
-  color: var(--clr-yellowLight);
-}
-.banner {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 
 /*===========
     ARTICLES
@@ -283,12 +361,10 @@ p {
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
-  /* margin: 1rem; */
   padding: 2rem;
 }
 
 .scrolling-wrapper::-webkit-scrollbar {
-  /* display: none; */
   height: 00.5rem;
 }
 

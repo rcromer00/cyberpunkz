@@ -17,11 +17,12 @@
 		<link rel="stylesheet" href="../css/style.css" />
 	</head>
 	<body>
-		<!-- navbar -->
+		<!-- NAVBAR -->
 		<!-- nav button -->
 		<span class="nav-btn" id="nav-btn">
 			<i class="fas fa-bars"></i>
 		</span>
+        <!-- end of nav button -->
 		<nav class="navbar" id="navbar">
 			<div class="navbar-header">
 				<span class="nav-close" id="nav-close">
@@ -48,36 +49,40 @@
 			<!-- HEADER -->
 			<header class="header about-header">
 				<div class="banner">
-					<h1>about the future</h1>
+					<h1>sign up</h1>
 				</div>
 			</header>
-			<!-- END OF HEADER -->
-			<!-- ABOUT -->
-			<div class="content-divider"></div>
-			<section class="section-center">
-				<div class="about-text">
-					<h2>what it holds...</h2>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
-						consequatur. Aspernatur laborum earum esse recusandae, atque
-						perspiciatis consequuntur adipisci nihil maxime. Mollitia
-						exercitationem distinctio autem?
-					</p>
-				</div>
-				<div class="about-image">
-					<img src="../images/DALL.E cyberpunkCharacter3.png" alt="" />
-				</div>
-			</section>
-			<!-- END OF ABOUT -->
-			<div class="content-divider"></div>
-			<!-- SIGN UP -->
-			<section class=".section-center">
-				<!-- BUTTON -->
-				<a href="./signup.html" target="_blank"
-					><button class="btn" type="submit">sign up</button></a
-				>
-			</section>
-		</main>
+			<!-- end of header -->
+            <!-- SIGN UP -->
+            <form action="">
+                <div class="container">
+                    <h1>sign up</h1>
+                <p>please fill in this form to create an account.</p>
+                <hr>
+                <!-- email -->
+                <label for="email"><b>Email</b></label>
+                <input type="text" name="email" placeholder="Enter Email" id="">
+                 <!-- password -->
+                 <label for="password"><b>password</b></label>
+                 <input type="password" name="password" placeholder="Enter Password" id="">
+                 <!-- repeat password -->
+                 <label for="password-repeat"><b>Repeat Password</b></label>
+                 <input type="password" name="password-repeat" placeholder="Repeat Password" id="" required>
+                 <!-- checkbox -->
+                 <label>
+                    <input type="checkbox" checked="checked" name="remember">remember me
+                </label>
+                <!-- t&c -->
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Conditions</a>.</p>
+
+                <div class="clearfix">
+                    <button type="btn" class="cancelbtn">Cancel</button>
+                    <button type="submit" aria-controls="signupbtn">Sign Up</button>
+                </div>
+                </div>
+            </form>
+            <!-- end of sign up -->
+
 		<!-- FOOTER -->
 		<footer class="footer">
 			<div class="section-center">
@@ -106,6 +111,5 @@
 			</div>
 		</footer>
 		<script src="../js/script.js" defer></script>
-		<script src="../js/signup.js" defer></script>
 	</body>
 </html>
