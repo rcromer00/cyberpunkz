@@ -13,7 +13,6 @@ FONTS
   --clr-pinkLight: #f596db;
   --clr-pinkDark: #3f0630;
   --clr-blue: #17e4e8;
-  --clr-blueLight: #96f3f5;
   --clr-blueDark: #063e3f;
   --clr-yellow: #ebef10;
   --clr-yellowLight: #f6f892;
@@ -95,6 +94,7 @@ h4 {
 p {
   margin-bottom: 1.25rem;
 }
+
 
 @media screen and (min-width: 800px) {
   h1 {
@@ -423,6 +423,17 @@ input[type=checkbox] {
 .nav-link:hover a {
   color: var(--clr-yellowLight);
 }
+
+.nav-title  {
+  font-family: var(--ff-primary);
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.icon {
+  display: inline;
+}
+
 @media screen and (min-width: 868px) {
 	.navbar {
   display: flex;
@@ -433,14 +444,28 @@ input[type=checkbox] {
   box-shadow: none;
   background: var(--clr-grey5);
 }
+
+#nav-home {
+  visibility: hidden;
+  display: none;
+}
+
 .nav-link{
   font-size: 1.2rem;
   display: inline-block;  
-  padding: 1rem;
+  padding: 0.7rem;
 }
+
 .nav-close, .nav-btn {
   visibility: hidden;
   opacity: 0;
+}
+
+@media screen and (min-width: 992px) {
+  #nav-home {
+    visibility: visible;
+    display: inline;
+  }
 }
 }
 /*==========
