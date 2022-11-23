@@ -1,136 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>2077</title>
-		<!-- favicon -->
-		<link rel="icon" type="image/x-icon" href="../images/favicon.png" />
-		<!-- icon library -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<!-- font-awesome -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		<!-- stylesheet -->
-		<link rel="stylesheet" href="../css/style.css" />
-	</head>
-	<body>
-		<!-- NAVBAR -->
-		<!-- nav button -->
-		<span class="nav-btn" id="nav-btn">
-			<i class="fas fa-bars"></i>
-		</span>
-        <!-- end of nav button -->
-		<nav class="navbar" id="navbar">
-			<div class="navbar-header">
-				<span class="nav-close" id="nav-close">
-					<i class="fas fa-times"></i>
-				</span>
-			</div>
-			<ul class="nav-items">
-				<a href="index.html">
-						<li class="nav-link">
-							<i class="fa fa-fw fa-home"></i>
-						</li>
-					</a>
-					<a href="about.html">
-						<li class="nav-link">
-							About
-						</li>
-					</a>
-					<a href="articles.html">
-						<li class="nav-link">
-							Articles
-						</li>
-					</a>
-					<a href="news.html">
-						<li class="nav-link">
-							News
-						</li>
-					</a>
-					<a href="products.html">
-						<li class="nav-link">
-							Products
-						</li>
-				</a>	
-			</ul>
-		</nav>
-		<!-- end of navbar -->
-		<main>
-			<!-- HEADER -->
-			<header class="header signup-header">
-				<div class="banner">
-					<h1>sign up</h1>
-				</div>
-			</header>
-			<!-- end of header -->
-			<div class="content-divider"></div>
-            <!-- SIGN UP -->
-					<div class="signup-text container">		
-						<h1>sign up</h1>
-                		<p>please fill in this form to create an account.</p>
-					</div>
-				<div class="content-divider"></div>
-				<!-- sign up form -->
-				<form action="">
-                <div class="container">
-                <!-- email -->
-                <label class="form-label" for="email"><b>Email</b></label>
-                <input class="form-control" type="text" name="email" placeholder="Enter Email" id="">
-                 <!-- password -->
-                 <label class="form-label" for="password"><b>password</b></label>
-                 <input class="form-control" type="password" name="password" placeholder="Enter Password" id="">
-                 <!-- repeat password -->
-                 <label class="form-label" for="password-repeat"><b>Repeat Password</b></label>
-                 <input class="form-control" type="password" name="password-repeat" placeholder="Repeat Password" id="" required>
-                 <!-- checkbox -->
-                 <label>
-                    <input type="checkbox" checked="checked" name="remember">remember me
-                </label>
-                <!-- t&c -->
-                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Conditions</a>.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2077</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
+    <!-- icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <!-- nav button -->
+    <span class="nav-btn" id="nav-btn">
+      <i class="fas fa-bars"></i>
+    </span>
+    <!-- end of nav button -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-header">
+        <span class="nav-close" id="nav-close">
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
+      <ul class="nav-items">
+        <!-- home -->
+        <a href="index.html">
+          <li class="nav-link">
+            <i class="fa fa-fw fa-home icon">
+              <span class="nav-title" id="nav-home">Home</span>
+            </i>
+          </li>
+        </a>
+        <!-- articles -->
+        <a href="articles.html">
+          <li class="nav-link">
+            <i class="fa-regular fa-newspaper icon">
+              <span class="nav-title">Articles</span>
+            </i>
+          </li>
+        </a>
+        <!-- news -->
+        <a href="news.html">
+          <li class="nav-link">
+            <i class="fa-brands fa-neos icon">
+              <span class="nav-title">News</span>
+            </i>
+          </li>
+        </a>
+        <!-- products -->
+        <a href="products.html">
+          <li class="nav-link">
+            <i class="fa-brands fa-product-hunt icon">
+              <span class="nav-title">Products</span>
+            </i>
+          </li>
+        </a>
+        <!-- signup -->
+        <a href="signup.html">
+          <li class="nav-link">
+            <i class="fa-solid fa-user-plus icon">
+              <span class="nav-title">Sign up</span>
+            </i>
+          </li>
+        </a>
+      </ul>
+    </nav>
+    <!-- end of navbar -->
+    <main>
+      <!-- HEADER -->
+      <header class="header signup-header">
+        <div class="banner">
+          <h1>sign up</h1>
+        </div>
+      </header>
+      <!-- end of header -->
+      <div class="content-divider"></div>
+      <!-- SIGN UP -->
+      <div class="signup-text container">
+        <h1>sign up</h1>
+        <p>please fill in this form to create an account.</p>
+      </div>
+      <div class="content-divider"></div>
+      <!-- sign up form -->
+      <form action="">
+        <div class="container">
+          <!-- email -->
+          <label class="form-label" for="email"><b>Email</b></label>
+          <input
+            class="form-control"
+            type="text"
+            name="email"
+            placeholder="Enter Email"
+            id=""
+          />
+          <!-- password -->
+          <label class="form-label" for="password"><b>password</b></label>
+          <input
+            class="form-control"
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            id=""
+          />
+          <!-- repeat password -->
+          <label class="form-label" for="password-repeat"
+            ><b>Repeat Password</b></label
+          >
+          <input
+            class="form-control"
+            type="password"
+            name="password-repeat"
+            placeholder="Repeat Password"
+            id=""
+            required
+          />
+          <!-- checkbox -->
+          <label>
+            <input type="checkbox" checked="checked" name="remember" />remember
+            me
+          </label>
+          <!-- t&c -->
+          <p>
+            By creating an account you agree to our
+            <a href="#" style="color: dodgerblue">Terms & Conditions</a>.
+          </p>
 
-                <div class="signupBtn-container">
-                    <button type="btn" class="cancelbtn">Cancel</button>
-                    <button type="submit" class="signupbtn">Sign Up</button>
-                </div>
-                </div>
-            </form>
-            <!-- end of sign up -->
+          <div class="signupBtn-container">
+            <button type="btn" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn">Sign Up</button>
+          </div>
+        </div>
+      </form>
+      <!-- end of sign up -->
 
-		<!-- FOOTER -->
-		<footer class="footer">
-			<div class="section-center">
-				<div class="social-icons">
-					<!-- #1 social icons -->
-					<a href="#" class="social-icon">
-						<i class="fab fa-facebook"></i>
-					</a>
-					<!-- end of #1 social icon -->
-					<!-- #2 social icons -->
-					<a href="#" class="social-icon">
-						<i class="fab fa-twitter"></i>
-					</a>
-					<!-- end of #2 social icon -->
-					<!-- #3 social icons -->
-					<a href="#" class="social-icon">
-						<i class="fab fa-instagram"></i>
-					</a>
-					<!-- end of #3 social icon -->
-				</div>
-				<h4 class="footer-text">
-					&copy;<span>2020</span>
-					<span class="company">cyberPunkz</span>
-					all rights reserved
-				</h4>
-			</div>
-		</footer>
-		<script src="../js/script.js" defer></script>
-	</body>
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="section-center">
+          <div class="social-icons">
+            <!-- #1 social icons -->
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <!-- end of #1 social icon -->
+            <!-- #2 social icons -->
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <!-- end of #2 social icon -->
+            <!-- #3 social icons -->
+            <a href="#" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <!-- end of #3 social icon -->
+          </div>
+          <h4 class="footer-text">
+            &copy;<span>2020</span>
+            <span class="company">cyberPunkz</span>
+            all rights reserved
+          </h4>
+        </div>
+      </footer>
+    </main>
+    <script src="../js/script.js" defer></script>
+  </body>
 </html>

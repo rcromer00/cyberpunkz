@@ -445,6 +445,11 @@ input[type=checkbox] {
   background: var(--clr-grey5);
 }
 
+.nav-items{
+  display: inline-block;
+  margin: 0 auto;
+}
+
 #nav-home {
   visibility: hidden;
   display: none;
@@ -471,8 +476,6 @@ input[type=checkbox] {
 /*==========
   HEADERS
  =========== */
-
-
 .index-header{
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../images/cyberpunk.webp") center/cover no-repeat fixed;
@@ -542,19 +545,52 @@ grid-template-columns: repeat(3, 1fr);
 }
 
 @media screen and (min-width: 768px) {
+ .reset-style, .reset-style * {
+  all: revert;
+ }
+
   .article-container{
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+    position: relative;
+    border: 5px green solid;
+  }
+  
+  .card {
+    border: blue 3px solid;
+    display: grid;
+    place-items: center;
   }
 
-  .scrolling-wrapper{
-  position: relative;
+  .article-img {
+    width: 100vw;
+    max-height: 100vh;
+    border: red 5px solid;
   }
 
+  .card img {
+    max-width: fit-content;
+    display: block;
+    /* object-fit: contain cover; */
+    margin: 0 auto;
+  }
+
+  /*
   .card {
     margin: 2rem;
+    border: red  10px solid;
+    background-color: blue;
   }
 
+  .card img {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+  } */
+
+/* 
   .character-img{
     display: block;
     position: absolute;
@@ -562,7 +598,7 @@ grid-template-columns: repeat(3, 1fr);
     top: 100px;
     right: 100px;
     z-index: -1;
-  }
+  } */
 }
 
 /*==========
