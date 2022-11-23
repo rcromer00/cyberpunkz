@@ -20,12 +20,18 @@ FONTS
   --clr-grey1: #d9d9d9;
   --clr-grey5: #737373;
   --clr-grey10: #262626;
+  /* styles & dimensions */
+  --fluid-width: 90vw;
+	--max-width: 1170px;
   --ff-primary: "Orbitron", sans-serif;
   --ff-secondary: "Quicksand", cursive;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
-  --radius: 0.5rem;
+  --border-radius: 0.5rem;
   --shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+  --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+	--shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.5);
+  --transform: scale(1.05);
 
 }
 
@@ -166,22 +172,32 @@ p {
 	margin: 2rem;
 }
 
+.title {
+  padding: 2rem;
+  text-align: center;
+  background: var(--clr-yellowLight);
+  color: var(--clr-yellowDark);
+  padding: 0.5rem;
+}
+
 .section-title h2{
 	padding: 2rem;
 	text-align: center;
 }
 
-.section-text p{
+.blog-text {
 	padding: 2rem;
 	text-align: center;
-	line-height: 2.7rem;
+	line-height: 1.7rem;
   color: var(--clr-yellowLight);
 }
 
-.card {
+.blogs-center a {
+  color: var(--clr-yellowLight);
+}
+.blogs-center{
   background: var(--clr-yellowDark);
-  position: relative;
-  height: 200px;
+  height: 100%;
   width: 300px;
   margin: 0.7rem;
 }
@@ -271,8 +287,10 @@ p {
     border-radius: 10px;
 }
 
+/* horizontal scrolling container */
 .scrolling-wrapper {
   overflow-x: scroll;
+  overflow-y: hidden;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
@@ -499,20 +517,33 @@ input[type=checkbox] {
 .article-container{
 display: grid;
 grid-template-columns: repeat(3, 1fr);
+width: var(--fluid-width);
 }
 
+.card {
+  /* position: relative; */
+  
+}
 
-.card img {
+.blog-img {
   max-width: 300px;
   height: 200px;
+  position: relative;
 }
 
-.article-content h2{
+.blog-content span {
+  text-transform: uppercase;
+}
+.blog-content h3{
 	font-size: 1.7rem;
   margin: 0.5rem 0 0.5rem 0;
 }
 
-.article-text {
+.section-title h2 {
+  justify-self: center;
+  justify-content: center;
+}
+.blog-text {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -527,15 +558,20 @@ grid-template-columns: repeat(3, 1fr);
   text-align: center;
 }
 
-.card:hover .article-text {
+.card:hover .blog-text {
   visibility: visible;
   opacity: 1;
   box-shadow: 2px 2px 2px 2px rgba(245, 253, 0, 0.6);
 }
 
-.card:hover h2 {
+.card:hover h3 {
   visibility: hidden;
-  opacity: 0;
+  display: none;
+  transition: var(--transition);
+}
+
+.card a {
+  display: block;
   transition: var(--transition);
 }
 
@@ -571,12 +607,106 @@ grid-template-columns: repeat(3, 1fr);
   }
 
   .card img {
-    max-width: fit-content;
+    max-width: ;
     display: block;
     /* object-fit: contain cover; */
     margin: 0 auto;
   }
 
+/* 
+  =========
+    TEST
+  =========
+*/
+   .blogs{
+    padding:20px;
+   }
+   
+   /* section title */
+   .section-title {
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    background: var(--clr-yellowLight);
+    color: var(--clr-yellowDark);
+    width: max-content;
+    margin: 0 auto 1rem auto;
+   }
+
+   /* blogs center */
+   .blogs-center {
+    width: var(--fluid-width);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    max-width: 500px;
+   }
+
+   .blog {
+    background: var(--clr-yellowDark);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    margin-bottom: 1rem;
+   }
+
+   .blog:hover {
+    box-shadow: var(--shadow-dark);
+   }
+ 
+   /* blog image */
+   .blog-img {
+    max-width: var(--max-width);
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    transition: var(--transition);
+    overflow: hidden;
+   }
+
+   img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+   }  
+   
+   .blog-img:hover {
+    transform: var(--transform);
+   }
+
+   /* blog content */
+   .blog-content {
+    padding-bottom: 0.5rem;
+   }
+   
+   .blog-content span {
+    text-transform: uppercase;
+    color: var(--clr-grey1);
+    letter-spacing: var(--spacing);
+    font-weight: lighter;
+   }
+
+   .blog-content h3 {
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    font-weight: 900;
+    margin: 0.5rem;
+    color: var(--clr-yellow);
+   }
+
+   .blog-content p {
+    color: var(--clr-yellowLight);
+    margin-bottom: 00.5rem;
+   }
+
+   .blog-content a {
+    text-transform: capitalize;
+    color: var(--clr-yellow);
+    letter-spacing: var(--spacing);
+    font-weight: bold;
+   }
+/* 
+  ==============
+    END OF TEST
+  ==============
+*/
   /*
   .card {
     margin: 2rem;

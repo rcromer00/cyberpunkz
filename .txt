@@ -1,0 +1,52 @@
+<section class="scrolling-wrapper reset-style">
+	<div class="article-container">
+		<!-- first article -->
+		<article class="card" id="card1">
+			<!-- image -->
+			<div class="article-img">
+				<img src="../images/cp-city.jpeg" alt="city boy" />
+			</div>
+			<!-- article content -->
+			<div class="article-content">
+				<h2>City boy</h2>
+				<p class="article-text">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+					provident necessitatibus ea!
+				</p>
+			</div>
+		</article>
+		<!-- end of first article -->
+		<!-- second article -->
+		<article class="card" id="card2">
+			<!-- image -->
+			<div class="article-img">
+				<img src="../images/CBcar.jpg" alt="city boy" />
+			</div>
+			<!-- article content -->
+			<div class="article-content">
+				<h2>City boy</h2>
+				<p class="article-text">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+					provident necessitatibus ea!
+				</p>
+			</div>
+		</article>
+		<!-- end of second article -->
+		<!-- third article -->
+		<article class="card" id="card3">
+			<!-- image -->
+			<div class="article-img">
+				<img src="../images/cp-city.jpeg" alt="city boy" />
+			</div>
+			<!-- article content -->
+			<div class="article-content">
+				<h2>City boy</h2>
+				<p class="article-text">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+					provident necessitatibus ea!
+				</p>
+			</div>
+		</article>
+		<!-- end of third article -->
+	</div>
+</section>
